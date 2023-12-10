@@ -39,7 +39,7 @@ body {
     height: 100px;
     padding: 0 3em;
 
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .logo {
@@ -48,7 +48,7 @@ body {
     border-radius: 7px;
     background-color: #fffafa;
     color: #cb380f;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .header__pages-list {
@@ -93,13 +93,13 @@ a:hover {
 }
 
 .header__intro-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 800;
     text-transform: uppercase;
 }
 
 .header__intro-info {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300;
     margin: 1em;
     opacity: 0.9;
@@ -109,7 +109,7 @@ a:hover {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 200px;
+    width: 180px;
     height: 50px;
     font-size: 1.5rem;
     letter-spacing: 2px;
@@ -212,7 +212,7 @@ a:hover {
 
 .title-main {
     line-height: 1.1;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     margin-bottom: 1em;
 }
@@ -225,13 +225,13 @@ a:hover {
 .props__villa-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 4em;
+    gap: 3em;
     margin: 0 4em;
     justify-content: space-around;
 }
 
 .props__villa-list-item {
-    width: 500px;
+    width: 400px;
     padding: 1em;
     background-color: rgb(234, 233, 233);
     position: relative;
@@ -239,13 +239,13 @@ a:hover {
 
 .props__villa-list-item img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
 }
 
 .props__villa-list-item-price {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-color: #cb380f;
     color: #fffafa;
     border-radius: 50%;
@@ -256,7 +256,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -266,7 +266,7 @@ a:hover {
 
 .props__villa-list-item-title {
     margin: 0.7em 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .props__villa-list-item-desc {
@@ -276,8 +276,8 @@ a:hover {
 }
 
 .props__villa-list-item-desc p {
-    margin-right: 20px;
-    font-size: 1.3rem;
+    margin-right: 10px;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -299,6 +299,7 @@ a:hover {
     background-color: #21201f;
     box-shadow: 5px 5px 10px rgb(97, 97, 97);
     margin: 1.2em 0;
+    padding: 0 .5em;
 }
 
 .props__villa-list-item-btn:hover {
@@ -316,7 +317,7 @@ a:hover {
 /*HOW IT WORKS STYLING*/
 
 .how-it-works {
-    margin: 7em 4em;
+    margin: 4em;
 }
 
 .how-it-works__list-item-top {
@@ -339,8 +340,8 @@ a:hover {
 }
 
 .how-it-works__list-item-icon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background-color: #cb380f;
     border-radius: 50%;
     display: flex;
@@ -354,11 +355,11 @@ a:hover {
 
 .how-it-works__list-item-name {
     margin: 0.5em 0;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
 }
 
 .how-it-works__list-item-details {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #7e7d7c;
 }
 
@@ -388,7 +389,7 @@ a:hover {
 
 .about__photo img {
     width: 100%;
-    height: 570px;
+    height: 500px;
     border-radius: 10px;
 }
 
@@ -425,7 +426,7 @@ a:hover {
 
 .about__info-list-item-text h2 {
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .about__info-list-item-text p {
@@ -475,14 +476,14 @@ a:hover {
 }
 
 .rewiew__list-item-profile-info h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #fffafa;
 }
 
 .rewiew__list-item-profile-info p,
 .rewiew__list-item-text {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #fffafa;
     opacity: 0.8;
 }
@@ -521,7 +522,7 @@ a:hover {
     .header__pages-list-item {
         width: 100%;
         border-bottom: #e8e6e4 2px solid;
-        padding: .5em;
+        padding: 1em;
     }
 
     .header__pages-list-item:last-child {
@@ -544,16 +545,11 @@ a:hover {
     }
 
     .header__intro-title {
-        font-size: 4rem;
+        font-size: 2.7rem;
     }
 
     .how-it-works__list {
         gap: 2em;
-    }
-
-    .how-it-works__list-item-icon {
-        width: 100px;
-        height: 100px;
     }
 
     .about {
@@ -572,16 +568,6 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-
-    .header__intro-title {
-        font-size: 3.8rem;
-    }
-
-    .header__intro-info {
-        font-size: 1.2rem;
-    }
-
-
     .how-it-works__list {
         flex-wrap: wrap;
     }
@@ -600,7 +586,7 @@ a:hover {
 
     .rewiew__list-item-profile-info p,
     .rewiew__list-item-text {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 
     .about__photo img {
@@ -633,28 +619,20 @@ a:hover {
         align-items: center;
     }
 
-    .how-it-works__list-item-name {
-        font-size: 1.9rem;
-    }
-
     .about {
         margin: 0 2em;
     }
 
-    .about__info-list-item-text h2 {
-        font-size: 1.4rem;
+     .about__info-list-item-text h2 {
+        font-size: 1.3rem;
     }
 
     .about__info-list-item-text p {
-        font-size: 1rem;
-    }
+        font-size: .9rem;
+    } 
 
     .how-it-works__list {
         flex-direction: column;
-    }
-
-    .header__intro-title {
-        font-size: 3.5rem;
     }
 
     .about__info-list-item {
@@ -667,16 +645,22 @@ a:hover {
 
     .rewiew__list-item-profile-info p,
     .rewiew__list-item-text {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
-    .how-it-works__list-item-details {
-        font-size: 1.2rem;
-    }
 
     .how-it-works__list-item-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about__info-list-item-logo {
         width: 90px;
         height: 90px;
+    }
+
+    .how-it-works__list-item-name {
+        margin: 0.2em 0;
     }
 
     .rewiew__list-item {
@@ -691,8 +675,8 @@ a:hover {
          padding: 0.1em; 
     }
 
-    .header__navbar {
-        font-size: 1.1rem;
+    .how-it-works__list-item-details {
+        font-size: .9rem;
     }
 
 }
@@ -711,9 +695,9 @@ a:hover {
     }
 
     .props__villa-list-item-price {
-        width: 120px;
-        height: 120px;
-        font-size: 1.4rem;
+        width: 110px;
+        height: 110px;
+        font-size: 1.2rem;
     }
 
     .header__intro-title {
