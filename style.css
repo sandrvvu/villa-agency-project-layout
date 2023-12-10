@@ -1,0 +1,733 @@
+/* RESET CSS STYLING*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #FAF9F6;
+}
+
+
+/* HEADER STYLING*/
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1543489822-c49534f3271f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: #fffafa;
+
+    position: relative;
+}
+
+.header__navbar {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    height: 100px;
+    padding: 0 3em;
+
+    font-size: 1.5rem;
+}
+
+.logo {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: #fffafa;
+    color: #cb380f;
+    font-size: 2.4rem;
+}
+
+.header__pages-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.header__pages-list-item {
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.header__pages-list-item:hover {
+    color: #cb380f;
+}
+
+.header__pages-list-item:last-child {
+    position: absolute;
+    right: 5%;
+}
+
+a:hover {
+    transform: translateY(3px);
+}
+
+.active-page {
+    border-bottom: 3px #fffafa solid;
+}
+
+.header__intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: rgb(54, 53, 52) 4px 2px 10px;
+}
+
+.header__intro-title {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.header__intro-info {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1em;
+    opacity: 0.9;
+}
+
+.header__intro-btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fffafa;
+    background-color: #cb380f;
+    box-shadow: 5px 5px 10px rgb(97, 97, 97);
+}
+
+.header__intro-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 10px 15px rgb(97, 97, 97);
+}
+
+.header__intro-btn:active {
+    transform: translateY(4px);
+    box-shadow: 5px 5px 10px rgb(97, 97, 97);
+}
+
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #fffafa;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #fffafa;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger:before {
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger:after {
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle-menu {
+    display: none;
+}
+
+.header__pages-container input:checked~.hamburger {
+    background: transparent;
+}
+
+.header__pages-container input:checked~.hamburger:before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.header__pages-container input:checked~.hamburger:after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.header__pages-container input:checked~.header__pages-list {
+    right: 0;
+}
+
+
+
+/* PROPERTIES STYLING*/
+.props__title {
+    margin-top: 4em;
+    text-align: center;
+}
+
+.title-value {
+    color: #cb380f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.title-main {
+    line-height: 1.1;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.title-main span {
+    font-weight: 800;
+}
+
+
+.props__villa-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 0 4em;
+    justify-content: space-around;
+}
+
+.props__villa-list-item {
+    width: 500px;
+    padding: 1em;
+    background-color: rgb(234, 233, 233);
+    position: relative;
+}
+
+.props__villa-list-item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.props__villa-list-item-price {
+    width: 150px;
+    height: 150px;
+    background-color: #cb380f;
+    color: #fffafa;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.props__villa-list-item-price:hover {
+    transform: scale(1.1);
+}
+
+.props__villa-list-item-title {
+    margin: 0.7em 0;
+    font-size: 1.8rem;
+}
+
+.props__villa-list-item-desc {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.props__villa-list-item-desc p {
+    margin-right: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.props__villa-list-item-desc p>span {
+    font-weight: 600;
+}
+
+.props__villa-list-item-btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fffafa;
+    background-color: #21201f;
+    box-shadow: 5px 5px 10px rgb(97, 97, 97);
+    margin: 1.2em 0;
+}
+
+.props__villa-list-item-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 10px 15px rgb(97, 97, 97);
+}
+
+.props__villa-list-item-btn:active {
+    transform: translateY(4px);
+    box-shadow: 5px 5px 10px rgb(97, 97, 97);
+}
+
+
+
+/*HOW IT WORKS STYLING*/
+
+.how-it-works {
+    margin: 7em 4em;
+}
+
+.how-it-works__list-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how-it-works__list {
+    display: flex;
+    gap: 6em;
+    justify-content: space-between;
+}
+
+.how-it-works__list-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 320px;
+}
+
+.how-it-works__list-item-icon {
+    width: 120px;
+    height: 120px;
+    background-color: #cb380f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works__list-item-icon img {
+    width: 60%;
+}
+
+.how-it-works__list-item-name {
+    margin: 0.5em 0;
+    font-size: 2.4rem;
+}
+
+.how-it-works__list-item-details {
+    font-size: 1.5rem;
+    color: #7e7d7c;
+}
+
+.next-icon {
+    width: 30px;
+}
+
+
+
+/*ABOUT STYLING*/
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4em;
+    padding: 2em 0;
+    gap: 6em;
+}
+
+.about__info {
+    width: 40%;
+}
+
+.about__photo {
+    width: 60%;
+}
+
+.about__photo img {
+    width: 100%;
+    height: 570px;
+    border-radius: 10px;
+}
+
+.about__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about__info-list-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+}
+
+.about__info-list-item-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #cb380f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__info-list-item-logo img {
+    width: 50px;
+}
+
+.about__info-list-item-text {
+    width: 70%;
+}
+
+.about__info-list-item-text h2 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.about__info-list-item-text p {
+    font-size: 1.2rem;
+    color: #7e7d7c;
+}
+
+
+
+/*REWIEW SECTION*/
+
+.rewiew {
+    width: 100%;
+    background-color: #cb380f;
+    padding: 6em 4em;
+    margin-top: 7em;
+}
+
+.rewiew__title,
+.rewiew__title>p {
+    text-align: center;
+    color: #fffafa;
+}
+
+.rewiew__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.rewiew__list-item {
+    width: 700px;
+}
+
+.rewiew__list-item-profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.rewiew__list-item-profile-avatar img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.rewiew__list-item-profile-info h2 {
+    font-size: 1.7rem;
+    color: #fffafa;
+}
+
+.rewiew__list-item-profile-info p,
+.rewiew__list-item-text {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fffafa;
+    opacity: 0.8;
+}
+
+.rewiew__list-item-text {
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width: 1348px) {
+
+    .hamburger,
+    .toggle-menu {
+        display: block;
+    }
+
+    .header__pages-list {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background: #cb380f;
+        width: 300px;
+        height: 100%;
+        padding-top: 105px;
+        border-left: #21201fb9 4px solid;
+    }
+
+    .header__pages-list-item {
+        width: 100%;
+        border-bottom: #e8e6e4 2px solid;
+        padding: .5em;
+    }
+
+    .header__pages-list-item:last-child {
+        position: relative;
+        right: auto;
+    }
+
+    .header__navbar {
+        justify-content: space-between;
+    }
+
+    .header__pages-list-item:hover {
+        color: #21201f;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        background-position: left;
+    }
+
+    .header__intro-title {
+        font-size: 4rem;
+    }
+
+    .how-it-works__list {
+        gap: 2em;
+    }
+
+    .how-it-works__list-item-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about {
+        gap: 3em;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about__info,
+    .about__photo {
+        width: 100%
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .header__intro-title {
+        font-size: 3.8rem;
+    }
+
+    .header__intro-info {
+        font-size: 1.2rem;
+    }
+
+
+    .how-it-works__list {
+        flex-wrap: wrap;
+    }
+
+    .how-it-works__list-item {
+        width: 90%;
+    }
+
+    .how-it-works__list-item-details {
+        width: 75%;
+    }
+
+    .rewiew {
+        padding: 4em 2em;
+    }
+
+    .rewiew__list-item-profile-info p,
+    .rewiew__list-item-text {
+        font-size: 1.2rem;
+    }
+
+    .about__photo img {
+        height: 400px;
+    }
+
+    .header__navbar {
+        padding: 0 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-main {
+        font-size: 3rem;
+    }
+
+    .props__villa-list {
+        margin: 0 2em;
+    }
+
+    .how-it-works {
+        margin: 4em 2em;
+    }
+
+    .about__photo img {
+        height: 350px;
+    }
+
+    .how-it-works__list {
+        align-items: center;
+    }
+
+    .how-it-works__list-item-name {
+        font-size: 1.9rem;
+    }
+
+    .about {
+        margin: 0 2em;
+    }
+
+    .about__info-list-item-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .about__info-list-item-text p {
+        font-size: 1rem;
+    }
+
+    .how-it-works__list {
+        flex-direction: column;
+    }
+
+    .header__intro-title {
+        font-size: 3.5rem;
+    }
+
+    .about__info-list-item {
+        align-items: flex-start;
+    }
+
+    .rewiew__list-item-profile-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .rewiew__list-item-profile-info p,
+    .rewiew__list-item-text {
+        font-size: 1rem;
+    }
+
+    .how-it-works__list-item-details {
+        font-size: 1.2rem;
+    }
+
+    .how-it-works__list-item-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .rewiew__list-item {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .header__pages-list-item {
+         padding: 0.1em; 
+    }
+
+    .header__navbar {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .rewiew__list {
+        flex-direction: column;
+    }
+
+    .about__photo img {
+        height: 250px;
+    }
+
+    .props__villa-list-item img {
+        height: 200px;
+    }
+
+    .props__villa-list-item-price {
+        width: 120px;
+        height: 120px;
+        font-size: 1.4rem;
+    }
+
+    .header__intro-title {
+        font-size: 2.2rem;
+    }
+
+    .header__intro-info {
+        font-size: 1rem;
+    }
+
+    .header__intro-btn {
+        width: 170px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+}
